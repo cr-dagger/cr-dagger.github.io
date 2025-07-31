@@ -30,12 +30,70 @@
 					<section id="four">
                         <h1 style="text-align: center; margin-bottom: 0; color: #4e79a7; font-size: 300%">Compliant Residual DAgger<br></h1>
 						<h2 style="text-align: center; white-space: nowrap; font-size: 150%">Improving Real-World Contact-Rich Manipulation with Human Corrections</h2>
-
+						
 						<div style="margin-top: 2em; margin-bottom: 2em;">
 							<h3 style="color: black;">
 
 							</h3>
 						</div>
+
+						<h2 style="color: black;">Additional Results</h2>
+
+						<div class="row" style="margin-bottom: -2em;">
+							<div class="12u$ 12u$(xsmall)" style="text-align: center;">
+								<img src="images/method_performance_comparison.png" style="width: 80%; height: auto;">
+							</div>
+						</div>
+
+						<div class="row 50% uniform" style="width: 100%">
+							<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+								<span class="image fit">
+									<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+										<source src="videos/book_base_failure_1_3x.mp4" type="video/mp4">
+									</video>
+									<div style="position: absolute; top: 2%; right: 1%">
+										<p style="color: white; text-align: center; font-size: 2em">3x</p>
+									</div>
+								</span>
+								Base Policy (15.625%)
+							</div> -->
+
+							<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+								<span class="image fit">
+									<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+										<source src="videos/new Belt residual 2batch.mp4" type="video/mp4">
+									</video>
+									<div style="position: absolute; top: 2%; right: 1%">
+										<p style="color: white; text-align: center; font-size: 2em">3x</p>
+									</div>
+								</span>
+								Compliant Residual Policy (96.825%)
+							</div>
+						</div>
+
+						<hr>
+
+						<h2 style="color: black;">Data Quality Analysis</h2>
+						<h3>[On-Policy Delta] introduces less distribution shift</h3>
+						<div class="row" style="margin-bottom: -2em;">
+							<div class="12u$ 12u$(xsmall)" style="text-align: center;">
+								<img src="images/Figure_1_traj_belt.jpeg" style="width: 80%; height: auto;">
+							</div>
+							<p style="color: black;">
+								Here shows the distribution of fingertip trajectories across all dimensions in base policy training data, [On-Policy Delta] and [Take-Over-Correction] data. [On-Policy Delta] data's distribution is better aligned with base policy training data's distribution than [Take-Over-Correction] data.
+							</p>
+						</div>
+
+						<h3>[On-Policy Delta] enables smoother trajectories</h3>
+						<div class="row" style="margin-bottom: -2em;">
+							<div class="12u$ 12u$(xsmall)" style="text-align: center;">
+								<img src="images/Figure_1_book_vel.png" style="width: 80%; height: auto;">
+							</div>
+							<p style="color: black;">
+								Here compares velocity magnitude within 1.5s of the corrections starts/ends. [On-Policy Delta] velocity magnitudes are smaller and more consistent, [Take-Over Correction] has notably larger magnitude and variations, demonstrating that [On-Policy Delta] encourages smoother trajectories.
+							</p>
+						</div>
+						<hr>
 
 						<div class="row 50% uniform" style="width: 100%">
 							<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
